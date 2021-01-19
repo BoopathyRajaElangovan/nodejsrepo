@@ -14,14 +14,12 @@
       </main>
         <footer>
         </footer>
-        <script>
+<script>
           var url = "<%= ouathLightningURL %>";
           var token = "Bearer "+"<%= oauthtoken %>";
           console.log(token);
-            $Lightning.use("c:ReferralCreateLtngOut", function() {
-                  $Lightning.createComponent("c:ReferralCreateLtngOutCmp", 
-				     { "referralId" : "" ,
-					   "accountId" : "" },
+            $Lightning.use("SEDreamin:SalesLeaderBoardVfApp", function() {
+                  $Lightning.createComponent("SEDreamin:SalesLeaderMain", {},
                      "leaderboard",
                       function(cmp) {
                          // do some stuff
