@@ -19,8 +19,8 @@
 		  console.log(url);
           var token = "Bearer "+"<%= oauthtoken %>";
           console.log(token);
-            $Lightning.use("SEDreamin:SalesLeaderBoardVfApp", function() {
-                  $Lightning.createComponent("SEDreamin:SalesLeaderMain", {},
+            $Lightning.use("c:SalesLeaderBoardVfApp", function() {
+                  $Lightning.createComponent("c:SalesLeaderMain", {},
                      "leaderboard",
                       function(cmp) {
                          // do some stuff
