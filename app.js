@@ -3,11 +3,11 @@ var express = require('express');
 var port = process.env.PORT || 3000;
 
 var org = nforce.createConnection({
-  clientId: '3MVG9n_HvETGhr3ABKR7E1noRUVVJ33Z.NKg.62uo1eyjoSudwaJxMue6_PIgVpAkl6cBuJ3pUA==',
-  clientSecret: 'B95335BD2BACE042D0D73716E22729A877F978CF7651257AA29EA6DD591B9268',
+  clientId: '3MVG9sLbBxQYwWqsz0JPulSTbNkQFzU_a_EMpkwDaQoyU511FJxh.0Yp_PQNlPqevHCgqB35rG1VOyXM6SIBq',
+  clientSecret: 'AF3A49511B6C9211F2D3069900CDA49ACF5222A1E69B7CE4E56433CCE5CE50F7',
   redirectUri: 'https://testnodejsdemoapp.herokuapp.com/oauth/_callback',
   apiVersion: 'v34.0',  // optional, defaults to current salesforce API version
-  environment: 'production',  // optional, salesforce 'sandbox' or 'production', production default
+  environment: 'sandbox',  // optional, salesforce 'sandbox' or 'production', production default
   mode: 'multi' // optional, 'single' or 'multi' user mode, multi default
 });
 
@@ -45,7 +45,7 @@ app.get('/oauth/_callback', function(req, res) {
     if(!err) {
       console.log('Access Token: ' + resp.access_token);
       app.locals.oauthtoken = resp.access_token;
-      app.locals.lightningEndPointURI = "https://mylwcstudio-dev-ed.lightning.force.com";
+      app.locals.lightningEndPointURI = "https://usb-nucleus--refprodev.lightning.force.com";
       res.redirect('/home');
     } else {
       console.log('Error: ' + err.message);
