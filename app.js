@@ -7,7 +7,7 @@ var org = nforce.createConnection({
   clientSecret: 'AF3A49511B6C9211F2D3069900CDA49ACF5222A1E69B7CE4E56433CCE5CE50F7',
   redirectUri: 'https://testnodejsdemoapp.herokuapp.com/oauth/_callback',
   apiVersion: 'v34.0',  // optional, defaults to current salesforce API version
-  environment: 'production',  // optional, salesforce 'sandbox' or 'production', production default
+  environment: 'sandbox',  // optional, salesforce 'sandbox' or 'production', production default
   mode: 'multi' // optional, 'single' or 'multi' user mode, multi default
 });
 
