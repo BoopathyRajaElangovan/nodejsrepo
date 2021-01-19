@@ -3,7 +3,7 @@ var express = require('express');
 var port = process.env.PORT || 3000;
 
 var org = nforce.createConnection({
-  clientId: '3MVG9sLbBxQYwWqsz0JPuISTbNkQFzU_a_EMpkwDaQoyU511FJxh.0Yp_PQNIPqevHCgqB35rG1VOyXM6SIBq',
+  clientId: '3MVG9sLbBxQYwWqsz0JPulSTbNkQFzU_a_EMpkwDaQoyU511FJxh.0Yp_PQNlPqevHCgqB35rG1VOyXM6SIBq',
   clientSecret: 'AF3A49511B6C9211F2D3069900CDA49ACF5222A1E69B7CE4E56433CCE5CE50F7',
   redirectUri: 'https://testnodejsdemoapp.herokuapp.com/oauth/_callback',
   apiVersion: 'v34.0',  // optional, defaults to current salesforce API version
