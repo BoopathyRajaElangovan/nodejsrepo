@@ -5,7 +5,7 @@ var port = process.env.PORT || 3000;
 var org = nforce.createConnection({
   clientId: '3MVG9n_HvETGhr3ABKR7E1noRUVVJ33Z.NKg.62uo1eyjoSudwaJxMue6_PIgVpAkl6cBuJ3pUA==',
   clientSecret: 'B95335BD2BACE042D0D73716E22729A877F978CF7651257AA29EA6DD591B9268',
-  redirectUri: 'https://mylwcstudio-dev-ed.lightning.force.com/oauth/_callback',
+  redirectUri: 'https://testnodejsdemoapp.herokuapp.com/oauth/_callback',
   apiVersion: 'v34.0',  // optional, defaults to current salesforce API version
   environment: 'production',  // optional, salesforce 'sandbox' or 'production', production default
   mode: 'multi' // optional, 'single' or 'multi' user mode, multi default
