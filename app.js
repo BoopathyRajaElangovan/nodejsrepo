@@ -1,6 +1,7 @@
 var nforce = require('nforce');
 var express = require('express');
 var port = process.env.PORT || 3000;
+const cors = require('cors');
 
 var org = nforce.createConnection({
   clientId: '3MVG9sLbBxQYwWqsz0JPulSTbNkQFzU_a_EMpkwDaQoyU511FJxh.0Yp_PQNlPqevHCgqB35rG1VOyXM6SIBq',
@@ -23,7 +24,19 @@ app.use('/home', routesHome);
 
 app.set('view engine', 'ejs');
 
-
+express()
+  .use(function(req, res, next) {
+      res.setHeader('Access-Control-Allow-Origin', '*');
+      res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, X-Response-Time, X-PINGOTHER, X-CSRF-Token,Authorization,X-Authorization');
+      res.setHeader('Access-Control-Allow-Methods', '*');
+      res.setHeader('Access-Control-Expose-Headers', 'X-Api-Version, X-Request-Id, X-Response-Time');
+      res.setHeader('Access-Control-Max-Age', '1000');
+      next();
+  })
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .get('/', cors(), (req, res) => res.render('pages/home'))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 app.get('/', function(req,res){
   res.redirect(org.getAuthUri());
