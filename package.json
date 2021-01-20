@@ -13,5 +13,13 @@
     "nforce": "*"
   },
   "author": "mohith",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoopathyRajaElangovan/nodejsrepo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BoopathyRajaElangovan/nodejsrepo/issues"
+  },
+  "homepage": "https://github.com/BoopathyRajaElangovan/nodejsrepo#readme"
 }
