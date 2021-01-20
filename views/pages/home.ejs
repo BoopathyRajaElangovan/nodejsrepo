@@ -20,12 +20,14 @@
           var token = "Bearer "+"<%= oauthtoken %>";
           console.log(token);
             $Lightning.use("c:ReferralCreateLtngOut", function() {
+			      console.log("before creating comp");
                   $Lightning.createComponent("c:ReferralCreateLtngOutCmp", 
 				     { "referralId" : "" ,
 					   "accountId" : "" },
                      "leaderboard",
                       function(cmp) {
                          // do some stuff
+						 console.log("comp is created");
                       });
             },url,token );
         </script>
